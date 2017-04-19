@@ -14,6 +14,7 @@
 		CCD744151EA8260B001D6D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD744131EA8260B001D6D89 /* LaunchScreen.storyboard */; };
 		CCD744201EA8260B001D6D89 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7441F1EA8260B001D6D89 /* TestTests.swift */; };
 		CCD7442B1EA8260B001D6D89 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7442A1EA8260B001D6D89 /* TestUITests.swift */; };
+		CCD744391EA82729001D6D89 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD744381EA82729001D6D89 /* SearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CCD744261EA8260B001D6D89 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD7442A1EA8260B001D6D89 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		CCD7442C1EA8260B001D6D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD744381EA82729001D6D89 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CCD744111EA8260B001D6D89 /* Assets.xcassets */,
 				CCD744131EA8260B001D6D89 /* LaunchScreen.storyboard */,
 				CCD744161EA8260B001D6D89 /* Info.plist */,
+				CCD744381EA82729001D6D89 /* SearchTableViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD7440D1EA8260A001D6D89 /* ViewController.swift in Sources */,
+				CCD744391EA82729001D6D89 /* SearchTableViewController.swift in Sources */,
 				CCD7440B1EA8260A001D6D89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
