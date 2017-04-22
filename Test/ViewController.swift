@@ -13,11 +13,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    private var searchBar: UISearchBar!
-    private var label: UILabel!
-    
     var searchController:UISearchController! = nil
-    
+    var currentLoc:MKPointAnnotation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +23,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
         let location = CLLocation(latitude: 40.705260, longitude: -74.005515)
         updateMap(location)
         
-        let currentLoc = MKPointAnnotation()
+        currentLoc = MKPointAnnotation()
         currentLoc.title = "Maiden ln"
         currentLoc.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let currentLocAnnotation = MKPinAnnotationView(annotation: currentLoc, reuseIdentifier: nil)
@@ -58,6 +55,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
         searchBar.sizeToFit()
         searchBar.placeholder = "Input text"
         navigationItem.titleView = searchController?.searchBar
+        searchBar.delegate = self
         
         searchTable.mapView = mapView
         searchTable.handleMapSearchDelegate = self
@@ -67,6 +65,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
     func updateMap(_ location: CLLocation)  {
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
         mapView.setRegion(region, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("Cancel!")
+        updateMap(CLLocation(latitude: currentLoc.coordinate.latitude, longitude: currentLoc.coordinate.longitude))
     }
     
 }
